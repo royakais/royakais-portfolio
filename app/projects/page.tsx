@@ -44,7 +44,7 @@ const projects = [
         tags: ["React", "CSS", "Netlify", "PHP"],
         github: "https://github.com/royakais/marielie-aya-roya-web",
         link: "https://marielie-aya-roya-web.netlify.app/",
-        image: "/images/website.jfif",
+        image: "/images/Website.png",
     },
 ];
 
