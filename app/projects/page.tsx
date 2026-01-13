@@ -34,9 +34,9 @@ const projects = [
         title: "BidZone",
         description: "An online bidding platform with modern UI and interactive features. Built during my internship with Techtalks with my team members",
         tags: ["Next.js", "Vercel", "full-stack"],
-        github: null,
+
         link: "https://bid-zone-three.vercel.app/",
-        image: "/images/bidzone.jpeg",
+        image: "/images/bidzone.png",
     },
     {
         title: "Frontend Website",
