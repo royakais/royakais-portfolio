@@ -31,7 +31,7 @@ const projects = [
         image: "/images/Javafx.png",
     },
     {
-        title: "Bid Zone Three",
+        title: "BidZone",
         description: "An online bidding platform with modern UI and interactive features. Built during my internship with Techtalks with my team members",
         tags: ["Next.js", "Vercel", "full-stack"],
         github: null,
