@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 
 export const metadata = {
-  title: "Roya Portfolio",
+  title: "Roya Kais",
   description: "Frontend Developer | Next.js | React",
 };
 

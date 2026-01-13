@@ -1,7 +1,8 @@
 .home {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 5rem 2rem 4rem 2rem;
+    padding: calc(5rem + 60px) 2rem 4rem 2rem;
+    /* Add navbar height to top padding */
     font-family: ui-sans-serif, system-ui, sans-serif;
 }
 
@@ -10,6 +11,8 @@
     text-align: center;
     margin-bottom: 6rem;
     animation: fadeInUp 0.8s ease-out;
+    scroll-margin-top: 60px;
+    /* fix for fixed navbar */
 }
 
 .name {
@@ -225,6 +228,15 @@
     margin: 0;
 }
 
+/* IMAGES INSIDE ABOUT OR CARDS (RECTANGULAR ON MOBILE) */
+.card img,
+.beyondCard img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    /* desktop round corners */
+}
+
 /* ANIMATIONS */
 @keyframes fadeInUp {
     from {
@@ -241,7 +253,7 @@
 /* RESPONSIVE */
 @media (max-width: 768px) {
     .home {
-        padding: 4rem 1.5rem 3rem 1.5rem;
+        padding: calc(4rem + 60px) 1.5rem 3rem 1.5rem;
     }
 
     .heroSection {
@@ -281,11 +293,17 @@
     .beyondCard {
         padding: 1.5rem;
     }
+
+    /* Make images rectangular on mobile */
+    .card img,
+    .beyondCard img {
+        border-radius: 0;
+    }
 }
 
 @media (max-width: 480px) {
     .home {
-        padding: 3.5rem 1.5rem 2.5rem 1.5rem;
+        padding: calc(3.5rem + 60px) 1.5rem 2.5rem 1.5rem;
     }
 
     .statsGrid {
@@ -295,6 +313,12 @@
 
     .stackGrid {
         grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    }
+
+    .card img,
+    .beyondCard img {
+        border-radius: 0;
+        /* ensure mobile rectangular */
     }
 }
 
