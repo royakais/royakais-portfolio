@@ -36,7 +36,7 @@ const projects = [
         tags: ["Next.js", "Vercel", "full-stack"],
 
         link: "https://bid-zone-three.vercel.app/",
-        image: "/images/bidzone.png",
+        image: "/images/bidzone.jpeg",
     },
     {
         title: "Frontend Website",
