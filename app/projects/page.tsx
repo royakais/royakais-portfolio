@@ -1,15 +1,17 @@
-import { Github, ExternalLink, Code2 } from 'lucide-react';
-import styles from './projects.module.css';
-import Image from 'next/image';
+// app/projects/page.tsx
+import { Github, ExternalLink, Code2 } from "lucide-react";
+import styles from "./projects.module.css";
+import Image from "next/image";
 
 const projects = [
     {
         title: "Vee Coffee Shop DBMS",
-        description: "A full-featured database management system for coffee shop operations.",
+        description:
+            "A full-featured database management system for coffee shop operations.",
         tags: ["Java", "MySQL", "Database"],
         github: "https://github.com/royakais/DBMS-VeeCoffeeShop",
         link: null,
-        image: "/vee.png",
+        image: "/images/vee.png",
     },
     {
         title: "BNF Interpreter",
@@ -17,15 +19,16 @@ const projects = [
         tags: ["Java", "Compiler Design"],
         github: "https://github.com/royakais/BNF-Interpreter",
         link: null,
-        image: "/BNF.png",
+        image: "/images/BNF.png",
     },
     {
         title: "Advanced Calculator",
-        description: "A feature-rich calculator application with advanced mathematical operations.",
+        description:
+            "A feature-rich calculator application with advanced mathematical operations.",
         tags: ["Java", "JavaFX", "OOP"],
         github: "https://github.com/royakais/Advanced-Calculator-",
         link: null,
-        image: "/javafx.png",
+        image: "/images/javafx.png",
     },
     {
         title: "Bid Zone Three",
@@ -33,35 +36,39 @@ const projects = [
         tags: ["Next.js", "Vercel", "full-stack"],
         github: "https://github.com/royakais/bid-zone-three",
         link: "https://bid-zone-three.vercel.app/",
-        image: "/bidzone.jpeg",
+        image: "/images/bidzone.jpeg",
     },
     {
-        title: "Frontend website",
+        title: "Frontend Website",
         description: "A creative web project showcasing UI design and animations.",
-        tags: ["React", "CSS", "Netlify", "php"],
+        tags: ["React", "CSS", "Netlify", "PHP"],
         github: "https://github.com/royakais/marielie-aya-roya-web",
         link: "https://marielie-aya-roya-web.netlify.app/",
-        image: "/website.jfif",
+        image: "/images/website.jfif",
     },
 ];
 
 export default function ProjectsPage() {
     return (
         <main className={styles.home}>
+            {/* Section Header */}
             <section className={styles.sectionHeader}>
-                <h1 className={styles.sectionTitle}>Featured <span className={styles.firstName}>Works</span></h1>
+                <h1 className={styles.sectionTitle}>
+                    Featured <span className={styles.firstName}>Works</span>
+                </h1>
                 <div className={styles.underline}></div>
                 <p className={styles.specialization}>
                     A collection of projects where I blend design with functional code.
                 </p>
             </section>
 
+            {/* Projects Grid */}
             <div className={styles.projectGrid}>
                 {projects.map((project, index) => (
                     <div
                         key={index}
                         className={styles.projectCard}
-                        style={{ '--card-index': index } as React.CSSProperties}
+                        style={{ "--card-index": index } as React.CSSProperties}
                     >
                         <div className={styles.projectImage}>
                             {project.image ? (
@@ -69,7 +76,7 @@ export default function ProjectsPage() {
                                     src={project.image}
                                     alt={project.title}
                                     fill
-                                    style={{ objectFit: 'cover' }}
+                                    style={{ objectFit: "cover" }}
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                 />
                             ) : (
@@ -82,18 +89,30 @@ export default function ProjectsPage() {
                             <p>{project.description}</p>
 
                             <div className={styles.tagRow}>
-                                {project.tags.map(tag => (
-                                    <span key={tag} className={styles.tag}>{tag}</span>
+                                {project.tags.map((tag) => (
+                                    <span key={tag} className={styles.tag}>
+                                        {tag}
+                                    </span>
                                 ))}
                             </div>
 
                             <div className={styles.projectLinks}>
                                 {project.link && (
-                                    <a href={project.link} target="_blank" rel="noopener noreferrer" className={styles.linkIcon}>
+                                    <a
+                                        href={project.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className={styles.linkIcon}
+                                    >
                                         <ExternalLink size={16} /> Live Demo
                                     </a>
                                 )}
-                                <a href={project.github} target="_blank" rel="noopener noreferrer" className={styles.linkIcon}>
+                                <a
+                                    href={project.github}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={styles.linkIcon}
+                                >
                                     <Github size={16} /> Code
                                 </a>
                             </div>
