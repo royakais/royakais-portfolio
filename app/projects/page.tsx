@@ -28,7 +28,7 @@ const projects = [
         tags: ["Java", "JavaFX", "OOP"],
         github: "https://github.com/royakais/Advanced-Calculator-",
         link: null,
-        image: "/images/javafx.png",
+        image: "/images/Javafx.png",
     },
     {
         title: "Bid Zone Three",
