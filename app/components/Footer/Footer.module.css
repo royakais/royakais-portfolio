@@ -1,0 +1,56 @@
+.footer {
+    padding: 2rem 0;
+    /* Reduced from 4rem */
+    background-color: #ffffff;
+    border-top: 1px solid #f1f5f9;
+    /* Lighter border */
+    text-align: center;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    /* Tighter gap between elements */
+}
+
+.name {
+    font-size: 1.1rem;
+    /* Slightly smaller */
+    font-weight: 600;
+    color: #1a202c;
+    margin: 0;
+}
+
+.socials {
+    display: flex;
+    gap: 1.5rem;
+    /* Reduced gap */
+    margin: 0.25rem 0;
+}
+
+.socialLink {
+    color: #0081cc;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    opacity: 0.8;
+}
+
+.socialLink:hover {
+    transform: translateY(-2px);
+    opacity: 1;
+    color: #005f99;
+}
+
+.copyright {
+    font-size: 0.8rem;
+    /* Smaller text */
+    color: #94a3b8;
+    margin: 0;
+}
+
+/* We removed the divider to save space and keep it minimal */

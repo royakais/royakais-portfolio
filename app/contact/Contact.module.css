@@ -1,0 +1,184 @@
+.home {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.contactWrapper {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.name {
+    font-size: 3.5rem;
+    margin: 0;
+}
+
+.firstName {
+    color: #0081cc;
+}
+
+.underline {
+    width: 60px;
+    height: 5px;
+    background: linear-gradient(90deg, #0081cc, #00b4d8);
+    border-radius: 10px;
+    margin: 1.5rem auto;
+}
+
+.specialization {
+    color: #718096;
+    max-width: 500px;
+    margin: 0 auto 4rem auto;
+    line-height: 1.6;
+    font-size: 1.2rem;
+}
+
+.actionGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+}
+
+.mainCard {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.mainCard:hover {
+    transform: translateY(-8px);
+    border-color: #0081cc;
+    box-shadow: 0 20px 40px rgba(0, 129, 204, 0.12);
+}
+
+.iconCircle {
+    background: rgba(0, 129, 204, 0.08);
+    color: #0081cc;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.mainCard:hover .iconCircle {
+    background: #0081cc;
+    color: white;
+    transform: scale(1.1);
+}
+
+.cardContent {
+    text-align: left;
+}
+
+.cardContent h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #1a202c;
+}
+
+.cardContent p {
+    margin: 0.2rem 0 0 0;
+    color: #718096;
+    font-size: 0.95rem;
+}
+
+.arrow {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    color: #cbd5e0;
+    transition: color 0.3s ease;
+}
+
+.mainCard:hover .arrow {
+    color: #0081cc;
+}
+
+.socialSection p {
+    color: #a0aec0;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.socialBar {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.socialPill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0.7rem 1.5rem;
+    background: #f8fafc;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #4a5568;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.socialPill:hover {
+    background: #fff;
+    border-color: #0081cc;
+    color: #0081cc;
+    transform: translateY(-3px);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .actionGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .socialBar {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .socialBar {
+        flex-direction: row;
+        flex-wrap: wrap;
+        /* allows wrapping if needed */
+        justify-content: center;
+        gap: 0.75rem;
+    }
+}
